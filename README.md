@@ -5,5 +5,5 @@ Site de apostas desenvolvido no âmbito da disciplina de Requisitos e Arquitetur
 Nota: 17.6/20
 
 <p align="center">
-  <img src="C:\Users\Carlos Preto\Desktop\ras1">
+  <img src="C:\Users\Carlos Preto\Desktop\ras1.png">
 </p>
