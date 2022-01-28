@@ -1,0 +1,757 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*background-image: linear-gradient(to right, #00204a, rgb(255, 255, 255));*/
+    background: linear-gradient(to right, #00204a, #ffffff);
+    overflow: hidden;
+}
+
+
+
+div::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #00204a;
+}
+
+div::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+  }
+
+div::-webkit-scrollbar-thumb {
+    background: #15daaf;
+    border-radius: 10px;
+}
+
+/*imagem enquanto não em dados da API*/
+.loading img{
+    margin-top: 30vh;
+    margin-left: 19vw;
+    width: 180px;
+    height: 150px;
+}
+
+
+/*seçao do das apostas e do boletim*/
+
+.secçao_apostas_e_boletim {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+/*jogos nos quais se pode apostar*/
+
+.secçao_apostas{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50vw;
+    height: 80vh;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.box_aposta{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 2%;
+    margin-left: 10%;
+    background: white;
+    border: 4px solid rgb(196, 196, 196);
+    box-shadow: 1px 1px 0px rgb(196, 196, 196),
+                2px 2px 0px rgb(196, 196, 196),
+                3px 3px 0px rgb(196, 196, 196),
+                4px 4px 0px rgb(196, 196, 196),
+                5px 5px 0px rgb(196, 196, 196),
+                6px 6px 0px rgb(196, 196, 196);
+}
+
+.box_aposta_especial{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 2%;
+    margin-left: 10%;
+    background: rgb(255, 255, 255);
+    border: 4px solid #15daaf;
+    box-shadow: 1px 1px 0px #15daaf,
+                2px 2px 0px #15daaf,
+                3px 3px 0px #15daaf,
+                4px 4px 0px #15daaf,
+                5px 5px 0px #15daaf,
+                6px 6px 0px #15daaf;
+}
+
+.aposta_data{
+    margin-top: 5px;
+    display: flex;
+    border-bottom: 3.5px solid black;
+    border-radius: 10px;
+}
+
+.aposta_data h6{
+    margin-top: 12px;
+    color: rgb(0, 0, 0);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    margin-left: 10px;
+    width: 450px;
+}
+
+
+.aposta_data button{
+    margin-left: 150px;
+    width: 50px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.aposta_data img{
+    width: 40px;
+    height: 40px;
+}
+
+.box_aposta_f1{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+    margin-top: 2px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 5%;
+    background: transparent;
+}
+
+.f1_data{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 4px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+.f1_data h6{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+.f1_data button{
+    width: 50px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.f1_data img{
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.f1_drivers{
+    position: relative;
+    height: 70vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.driver_box{
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 1);
+    border: 4px solid rgb(196, 196, 196);
+    box-shadow: 1px 1px 0px rgb(196, 196, 196),
+                2px 2px 0px rgb(196, 196, 196),
+                3px 3px 0px rgb(196, 196, 196),
+                4px 4px 0px rgb(196, 196, 196),
+                5px 5px 0px rgb(196, 196, 196),
+                6px 6px 0px rgb(196, 196, 196);
+}
+
+.driver_info{
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.driver_info a{
+    margin-top: 35px;
+    width: 50px;
+    height: 25px;
+}
+
+.driver_info span:hover{
+    background: #15daaf;
+    color: black;
+}
+
+.driver_info span{
+    background: green;
+    color: rgb(255, 255, 255);
+    width: 40px;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.driver_info h6{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin-top: 5vh;
+    /*color: white;*/
+}
+
+.driver_info h3{
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin-top: 5vh;
+    text-align: center;
+    /*color: white;*/
+}
+
+
+.driver_info img{
+    width: 80px;
+    margin-top: 10px;
+}
+
+.classificacao_button {
+    height: 30px;
+    margin-left: 5vw;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: burlywood;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.aposta_equipas{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+}
+
+.aposta_equipas img{
+    width: 60px;
+}
+
+.aposta_equipas h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.aposta_equipas h3{
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.team{
+    width: 100%;
+}
+
+.team img{
+    width: 60px;
+    height: 60px;
+}
+
+.aposta_odds{
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.aposta_odds a{
+    margin-right: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+
+
+.aposta_odds span{
+    color: white;
+    width: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.aposta_odds a.negative span{
+    background: red;
+}
+
+.aposta_odds a.positive span{
+    background: green;
+}
+
+
+
+/* Tabela de Classificações Liga Nos*/
+.exit{
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+.Classificacao{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.exitClassificacao{
+    position: absolute;
+    left: 75vw;
+    margin-top: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.tabelaClassificacao{
+    margin-top: 5vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-bottom: 5vh;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 5px #00204a;
+    border-radius: 10px;
+    animation: fadeIn2 .2s linear; /* Safari, Chrome and Opera > 12.1 */
+}
+
+
+@-webkit-keyframes fadeIn2 {
+    0% {
+      opacity: 0;
+      top: 0;
+    }
+    75% {
+      opacity: 0.5;
+      margin-top: 30px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    75% {
+        opacity: 0.5;
+        margin-top: 30px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.identificacao_campeonato{
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    border-bottom: 5px solid black;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+
+.identificacao_campeonato h6{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;   
+}
+
+.info_campeonato{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-bottom: 3px solid black;
+}
+
+.info_campeonato_inicial{
+    display: flex;
+    width: 50%;
+}
+
+.info_campeonato_inicial h6{
+    font-size: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold; 
+    margin-right: 10px;
+}
+
+.info_campeonato_inicial h5{
+    opacity: 0;
+}
+
+.info_campeonato_final{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.info_campeonato_final h6{
+    font-size: 15px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold; 
+}
+
+.tabela_equipas{
+    height: 67vh;
+    width: 57vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.ClassificacaoF1{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.exitClassificacaoF1{
+    position: absolute;
+    left: 75vw;
+    margin-top: 40px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.tabelaClassificacaoF1{
+    margin-top: 5vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-bottom: 5vh;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px 5px #00204a;
+    border-radius: 10px;
+    animation: fadeIn2 .2s linear; /* Safari, Chrome and Opera > 12.1 */
+}
+
+
+@-webkit-keyframes fadeIn2 {
+    0% {
+      opacity: 0;
+      top: 0;
+    }
+    75% {
+      opacity: 0.5;
+      margin-top: 30px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    75% {
+        opacity: 0.5;
+        margin-top: 30px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.identificacao_campeonatoF1{
+    margin-left: 1vw;
+    margin-top: 1vh;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    border-bottom: 5px solid black;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+
+.identificacao_campeonatoF1 h6{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;   
+}
+
+.info_campeonatoF1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-bottom: 3px solid black;
+}
+
+.info_campeonato_inicialF1{
+    display: flex;
+    width: 90%;
+}
+
+.info_campeonato_inicialF1 h6{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*font-weight: bold;*/ 
+    margin-right: 10px;
+}
+
+.info_campeonato_inicialF1 h5{
+    opacity: 0;
+}
+
+.info_campeonato_finalF1{
+    display: flex;
+    width: 10%;
+    justify-content: space-evenly;
+}
+
+.info_campeonato_finalF1 h6{
+    font-size: 18px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*font-weight: bold; */
+}
+
+.tabela_equipasF1{
+    height: 67vh;
+    width: 57vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+.box_classificacao_equipa_especial{
+    display: flex;
+    box-shadow: 0 0 5px 5px #15daaf;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    border-radius: 10px;
+}
+
+.box_classificacao_equipa_especial h3{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.box_classificacao_equipa_especial h6{
+    font-size: 20px;
+    margin-left: 0.1vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.box_classificacao_equipa{
+    display: flex;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    box-shadow: 0 0 5px 1px #9e9e9e;
+    border-radius: 10px;
+}
+
+.box_classificacao_equipa h3{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.box_classificacao_equipa h6{
+    font-size: 20px;
+    margin-left: 0.1vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.box_classificacao_equipa_parte_inicial{
+    display: flex;
+    width: 50%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+}
+
+.box_classificacao_equipa_parte_inicial h6{
+    margin-top: 5px;
+}
+
+.box_classificacao_equipa_parte_inicial img{
+    width: 30px;
+    height: 30px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.box_classificacao_equipa_parte_final{
+    width: 50%;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    margin-left: 75px;
+    padding-top: 5px;
+}
+
+
+.box_classificacao_equipaF1{
+    display: flex;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    box-shadow: 0 0 5px 1px #9e9e9e;
+    border-radius: 10px;
+}
+
+.box_classificacao_equipaF1 h3{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box_classificacao_equipaF1 h6{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.box_classificacao_equipa_parte_inicialF1{
+    display: flex;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.box_classificacao_equipa_parte_inicialF1 img{
+    width: 55px;
+    height: 55px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+.box_classificacao_equipa_parte_inicialF1 h6{
+    margin-top: 15px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.box_classificacao_equipa_parte_finalF1{
+    width: 10%;
+    text-align: right;
+}
+
+.box_classificacao_equipa_parte_finalF1 h6{
+    margin-top: 25px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

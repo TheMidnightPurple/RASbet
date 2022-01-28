@@ -1,0 +1,804 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #00204a;
+}
+
+
+/*Depositar*/
+
+/*maneira como popup aparece*/
+.drop_down_menu_depositar{
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    border: 3px solid #15daaf;
+    z-index: 9;
+}
+
+
+/*container que aparece quando carregamos em depositar*/
+.depositar-container{
+    max-width: 50vw;
+    padding: 10px;
+    background-color: white;
+    opacity: 0.95;
+}
+
+
+/*cor e tamanho de quantidade e numero cartao credito */
+.depositar-container b{
+    color: black;
+}
+
+/*campos dentro do container*/
+.depositar-container input[type=dinheiro], .depositar-container input[type=cc] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/*estilo dos botões de depositar */
+.depositar-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /*botão de cancelar a vermelho*/
+  .depositar-container .cancel {
+    background-color: red;
+  }
+  
+  /*efeitos de hovering */
+  .depositar-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+/*Levantar*/
+
+/*maneira como popup aparece*/
+.drop_down_menu_levantar{
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    border: 3px solid #15daaf;
+    z-index: 9;
+}
+
+
+/*container que aparece quando carregamos em levantar*/
+.levantar-container{
+    max-width: 50vw;
+    padding: 10px;
+    background-color: white;
+    opacity: 0.95;
+}
+
+
+/*cor e tamanho de quantidade e iban */
+.levantar-container b{
+    color: black;
+}
+
+/*campos dentro do container*/
+.levantar-container input[type=dinheiro], .levantar-container input[type=iban] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/*estilo dos botões de levantar */
+.levantar-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+  
+/*botão de cancelar a vermelho*/
+.levantar-container .cancel {
+background-color: red;
+}
+
+/*efeitos de hovering */
+.levantar-container .btn:hover, .open-button:hover {
+opacity: 1;
+}
+
+
+
+.desporto {   
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 0 0 1px 0;
+    /*margin-left: 15px;*/
+    background: rgb(255, 230, 0);
+}
+
+.desporto div{
+    
+    height: 5vh;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.desporto div:hover{
+    background-color: gold;
+}
+
+.desporto div p{
+    margin-left: 5px;
+}
+
+.selected {
+    border-style: solid;
+    border-color: red;
+    border-width: 0 0 4px 0;
+    color: red;
+    font-weight: bold;
+}
+
+.selected img{
+    filter:invert(-50%);
+}
+
+.competicao {
+
+    /*margin-top: 15px;*/
+    /*margin-bottom: 5px;*/
+    
+    width: 100vw;
+    height: 7vh;
+
+    display: flex;
+    flex-direction: row;
+
+    /*margin-left: 15px;*/
+
+    background: #029d3c;
+}
+
+.competicao div{
+
+    max-height: 7vh;
+
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 20px 10px 20px 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    cursor: pointer;
+
+    border-radius: 25px;
+}
+
+.selected2{
+    background-color: rgb(117, 117, 117);
+    color: blanchedalmond;
+    font-weight: bold;
+}
+
+.notSelected2{
+    background-color: white;
+    color: black;
+}
+
+.competicao div{
+    text-align: justify;
+}
+
+.competicao div:hover{
+    background-color: gold;
+}
+
+.competicao div p{
+    margin-left: 5px;
+}
+
+.apostas {
+    height: 75vh;
+    width: 50vw;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.boletimApostas {
+    
+    height: 90vh;
+    position: absolute;
+    position: fixed;
+    left: 50vw;
+
+    margin-left: 10px;
+    width: calc(50vw - 20px);
+
+    margin-top: -20px;
+    background: #d454a3;
+}
+
+.prediction-content .team-area {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 5px 3px;
+    justify-content: space-evenly;
+    border-bottom: 1 px solid black;
+}
+
+.prediction-content .team-area .team .team-name {
+    color: black;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+
+.prediction-content .team-area .vs {
+    color:black;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.prediction-content .team-area .team {
+    text-align: center;
+}
+
+.prediction-single .prediction-thumb {
+    overflow: hidden;
+}
+
+.prediction-single {
+    background-color: white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    overflow: hidden;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.col {
+    position: relative;
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.prediction-single .bet-area {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+.prediction-single .bet-area .total-bet-amount {
+    font-size: 14px;
+    color: #3b2911;
+}
+
+.prediction-content .team-area .team .result {
+    color: white;
+    display: block;
+}
+
+.prediction-single .bet-area .bet-prediction-points a.positive span {
+    background-color: #029d3c;
+}
+
+.prediction-single .bet-area .bet-prediction-points a.negative span {
+    background-color: #fd1d1d;
+}
+
+.prediction-single .bet-area .bet-prediction-points a {
+    margin: 1px 5px;
+    font-size: 14px;
+}
+
+.prediction-single .bet-area .bet-prediction-points span {
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: black;
+    margin-right: 8px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    color: black;
+}
+
+span {
+    font-size: 16px;
+    color: #97afd5;
+    line-height: 1.7;
+    margin: 0;
+    display: inline-block;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.team-area img{
+    max-height: 40px;
+    max-width: 40px;
+}
+
+.headerB {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+
+    background-color: white;
+
+    border-radius: 5px;
+}
+
+.headerB h3{
+    margin-left: 10px;
+}
+
+.compras{
+    margin-top: 10px;
+    background-color: white;
+    height: 53vh;
+
+    border-radius: 5px;
+
+    overflow-y: scroll;
+    background: #fd1d1d;
+}
+
+.pagar{
+    background-color: white;
+    height: 17vh;
+
+    margin-top: 10px;
+    padding-top: 15px;
+
+    border-radius: 5px;
+}
+
+.pagar h4{
+    margin-left: 15px;
+}
+
+.pagar h5{
+    position: absolute;
+    right: 30px;
+}
+
+.pagar div{
+    display: flex;
+    flex-direction: row;
+}
+
+.confirmar{
+    margin: 15px 15px 3px 15px;
+    width: 47vw;
+    height: 7vh;
+
+    border-radius: 15px;
+
+    background-color: rgba(184, 5, 5, 0.664);
+    border: none;
+    color: white;
+}
+
+.confirmar:hover{
+    background-color: red;
+}
+
+h6{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.campAposta{
+    display: flex;
+    flex-direction: row;
+}
+
+.campAposta img{
+    position: absolute;
+    right: 30px;
+
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.seguido{
+    display: flex;
+    flex-direction: row;
+}
+
+.compra{
+    margin: 15px 15px 0 15px;
+    padding: 15px 15px 15px 15px;
+    
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.c{
+    margin: 5px 5px 10px 5px; 
+    align-items: center;
+}
+
+.c p{
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.c h6{
+    font-size: 15px;
+    margin: 0;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.c input{
+    margin-left: 15px;
+    height: 30px;
+}
+
+.exit{
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+.Classi{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(80, 80, 80, 0.733);
+
+    display: none;
+}
+
+.exitClassi{
+    position: absolute;
+    left: 75vw;
+
+    margin-top: 25px;
+    z-index: 1;
+
+    cursor: pointer;
+}
+
+.tabelaClassi{
+    width: 120vh;
+    height: 100vh;
+    position: absolute;
+    left: 20vw;
+}
+
+.Confirmar2{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(80, 80, 80, 0.733);
+
+    display: none;
+
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 35vh;
+    padding-bottom: 35vh;
+
+    z-index: 999;
+}
+
+.Confirmar2 h1{
+    padding-bottom: 30px;
+}
+
+.Confirmar2 div{
+    background-color: burlywood;
+    height: 30vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.Confirmar2 button{
+    margin-top: 10px;
+    width: 50vw;
+    height: 5vh;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.confirmarS{
+    margin: 15px 15px 3px 15px;
+    width: 47vw;
+    height: 7vh;
+
+    border-radius: 15px;
+
+    background-color: rgba(184, 5, 5, 0.664);
+    border: none;
+    color: white;
+}
+
+.confirmarS:hover{
+    background-color: red;
+}
+
+.confirmarN{
+    margin: 15px 15px 3px 15px;
+    width: 47vw;
+    height: 7vh;
+
+    border-radius: 15px;
+
+    background-color: rgba(17, 5, 184, 0.664);
+    border: none;
+    color: white;
+}
+
+.confirmarN:hover{
+    background-color: royalblue;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.adicionarDinheiro{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: burlywood;
+
+    padding: 30px 30px 30px 30px;
+
+    display: none;
+}
+
+.adicionarDinheiro button{
+    position: absolute;
+    bottom: 30px;
+}
+
+.adicionarDinheiro div{
+    margin-top: 30px;
+}
+
+.adicionarDinheiro img{
+    margin-top: 10px;
+}
+
+.adicionarDinheiro h1{
+    margin-right: 30px;
+}
+
+.adicionarDinheiro input{
+    border: none;
+    width: 30vw;
+    border-radius: 15px;
+}
+
+.retirarDinheiro{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: burlywood;
+
+    display: none;
+}
+
+.retirarDinheiro button{
+    position: absolute;
+    bottom: 30px;
+}
+
+.retirarDinheiro div{
+    margin-top: 30px;
+}
+
+.retirarDinheiro img{
+    margin-top: 10px;
+}
+
+.retirarDinheiro h1{
+    margin-right: 30px;
+}
+
+.retirarDinheiro input{
+    border: none;
+    width: 30vw;
+    border-radius: 15px;
+}
+
+.Confirmar3, .Confirmar4{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(80, 80, 80, 0.733);
+
+    display: none;
+
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 35vh;
+    padding-bottom: 35vh;
+
+    text-align: center;
+}
+
+.InserirCodigo{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(80, 80, 80, 0.733);
+
+    display: none;
+
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-top: 35vh;
+    padding-bottom: 35vh;
+}
+
+.InserirCodigo h1{
+    margin: 15px 15px 3px 60px;
+}
+
+.InserirCodigo div{
+    margin: 15px 15px 3px 15px;
+}
+
+.InserirCodigo input{
+    margin: 5px 5px 5px 5px;
+}
+
+.barra{
+    /*background-image: linear-gradient(to right, rgb(255, 136, 0), rgb(255, 255, 255));*/
+    background-color: rgb(49, 95, 165);
+    width: 100vw;
+    height: 50px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.saldo{
+    margin-left: 15px;
+    padding-right: 50px;
+}
+
+.saldo h2{
+    display: flex;
+
+    align-items: center;
+    position: relative;
+}
+
+.operacoes{
+    display: flex;
+
+    align-items: center;
+    position: relative;
+}
+
+.operacoes {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.operacoes img{
+    margin-right: 15px;
+}
+
+.saldo img, h1, h2{
+    margin-right: 15px;
+}
+
+.hist h1{
+    margin-right: 5px;
+}
+
+.loading{
+    background-color: rgb(211, 211, 211); 
+    align-items: center; 
+    align-content: center; 
+    justify-content: center;
+
+    display: none;
+}

@@ -1,0 +1,324 @@
+/*boletim*/
+
+.secçao_boletim{
+    width: 50vw;
+}
+
+.carrinho_compras{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+    color: white;
+}
+
+.carrinho_compras img{
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.registos_boletim{
+    height: 78vh;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.boletim_jogos {
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 56vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    background: white;
+    box-shadow: 0 0 10px 1px #00204a;
+}
+
+.aposta_escolhida{
+    margin: 15px 15px 15px 15px;
+    padding: 0px 15px 0px 15px;    
+    border-style: solid;
+    box-shadow: 0 0 10px 1px #00204a;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.semInput {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.semInput_espacamento{
+    display: flex;
+    margin-left: 20px;
+}
+
+.semInput_espacamento h5{
+    margin-left: 5px;
+    color: #00b944;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.remove_aposta{
+    position: relative;
+    cursor: pointer;
+    margin-left: 640px;
+    margin-top: 10px;
+}
+
+.remove_aposta img{
+    width: 20px;
+    height: 20px; 
+}
+
+.remove_aposta_f1{
+    position: relative;
+    cursor: pointer;
+    margin-left: 20vw;
+    width: 50px;
+    height: 50px;
+}
+
+.remove_aposta_f1 img{
+    width: 20px;
+    height: 20px; 
+}
+
+.aposta_escolhida_f1{
+    margin: 15px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;    
+    border-style: solid;
+    box-shadow: 0 0 10px 1px #00204a;
+    border-radius: 10px;
+    display: flex;
+}
+
+.selecionar_moeda{
+    margin-left: 5px;
+    height: 30px;
+}
+
+.selecionar_moeda select{
+    height: 30px;
+}
+
+
+.input_montante_f1{
+    display: flex;
+}
+
+.input_montante_f1 h6{
+    font-size: 15px;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_montante_f1 button{
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    background: transparent;
+    margin-left: 10px;
+}
+
+.input_montante_f1 img{
+    margin-top: 10px;
+}
+
+.input_montante_f1 button img{
+    width: 50px;
+    height: 50px;
+    padding-bottom: 30px;
+}
+
+.input_montante_f1 input{
+    margin-top: 5px;
+    height: 30px;
+}
+
+.input_montante_f1 img{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.info_cara{
+    display: flex;
+}
+
+.info_aposta{
+    margin: 0px 5px 0px 5px; 
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.info_aposta h5{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.info_aposta h3{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.info_aposta_nomes{
+    margin-left: 20px;
+}
+
+.info_aposta_nomes h5{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.info_aposta p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.info_aposta h6{
+    font-size: 15px;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.info_aposta input{
+    margin-left: 15px;
+    height: 30px;
+}
+
+
+.info_aposta button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.info_aposta button img{
+    width: 50px;
+    height: 50px;
+}
+
+.boletim_cara_piloto{
+    margin-bottom: 15px;
+}
+
+.boletim_cara_piloto img{
+    height: 100%;
+    width: 90px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.boletim_info_piloto {
+    margin-bottom: 10px;
+}
+
+
+.boletim_piloto_vencedor h3{
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.apaga_aposta{
+    width: 50px;
+    height: 50px;
+}
+
+
+.boletim_pagamento {
+    margin-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10px;
+    border: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 10px 1px #00204a;
+}
+
+.boletim_pagamento h2{
+    padding-top: 5px;
+    color: #00b944;
+    font-weight: bold;
+}
+
+.boletim_montantes{
+    display: flex;
+}
+
+.boletim_ganhos{
+    display: flex;
+}
+
+.confirmar_aposta{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 47vw;
+    height: 50px;
+    background: #00204a;
+    opacity: 0.8;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.confirmar_aposta:hover{
+    opacity: 1;
+}
+
+
+/*mensagem de alerta*/
+.alert {
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #f44336;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    position: absolute;
+    margin-left: 300px;
+    font-size: 14px;
+}
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+        color: black;
+  }

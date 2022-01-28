@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="./static/favicon.ico">
+    <meta charset="utf-8">
+    <title>RASbet</title>
+    <meta name="description" content="My Page Description">
+    <link rel="stylesheet" href="./static/css/register.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+          grecaptcha.render('html_element', {
+            'sitekey' : '6Lc9-fYdAAAAAB_6Vp2j6yYzG7csmQ8w1MmsD-dp'
+          });
+        };
+      </script>
+</head>
+
+<body>
+    <div class="hero">
+
+        <div class="linguagens">
+            <button class="lng_pt" onclick="switchPortugal()">Português (PT)</button>
+            <button class="lng_eng" onclick="switchEnglish()">English (EN)</button>
+        </div>
+        
+        <div class="form-box">
+            <div class="logo">
+                <img src="static/images/logo_symbol.png">
+            </div>
+
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login_menu()">
+                    <p class="pt">Log In</p>
+                    <p class="en">Log In</p>
+                </button>
+                <button type="button" class="toggle-btn" onclick="register_menu()">
+                    <p class="pt">Registar</p>
+                    <p class="en">Register</p>
+                </button>
+            </div>
+
+            <form id="login" class="input-group">
+                
+                <label for="user">
+                    <p class="pt">Nome de Utilizador</p>
+                    <p class="en">Username</p>
+                </label>
+                <input id="login_nome" type="text" class="input-field" placeholder="Insert Text" name="user" pattern="^[a-zA-Z0-9-_\.]{3,}" required/>
+                
+                <label for="psw">
+                    <p class="pt">Password</p>
+                    <p class="en">Password</p>
+                </label>
+                <input id="login_password" type="password" class="input-field" placeholder="Insert Text" name="psw" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required/>
+                
+                <button class="login_user" type="submit">
+                    <p class="pt">Entrar</p>
+                    <p class="en">Log In</p>
+                </button>
+            </form>
+
+            <form id="register" class="input-group" style="overflow-y: scroll; overflow-x: hidden;">
+                
+                <label for="user">
+                    <p class="pt">Nome de Utilizador</p>
+                    <p class="en">Username</p>
+                </label>
+                <input id="register_nome" type="text" class="input-field" placeholder="Insert Text" name="user" pattern="^[a-zA-Z0-9-_\.]{3,}" required>
+                
+                <label for="email">
+                    <p class="pt">Email</p>
+                    <p class="en">Email</p>
+                </label>
+                <input id="register_email" type="text" class="input-field" placeholder="name@something.pt" name="email" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}$" required>
+                
+                <label for="psw">
+                    <p class="pt">Password</p>
+                    <p class="en">Password</p>
+                </label>
+                <input id="register_password" type="password" class="input-field" placeholder="Text and Numbers" name="psw" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                
+                <label for="address">
+                    <p class="pt">Morada</p>
+                    <p class="en">Address</p>
+                </label>
+                <input id="register_address" type="text" class="input-field" placeholder="Text" name="address" pattern="^[a-zA-Z0-9-_\.\ ]{5,}" required>
+                
+                <label for="telemovel">
+                    <p class="pt">Número de Telemóvel</p>
+                    <p class="en">Phone Number</p>
+                </label>
+                <input id="register_phone" type="text" class="input-field" placeholder="9 Digits" name="telemovel" pattern="^[0-9]{9}" required>
+                
+                <label for="cc">
+                    <p class="pt">Número de Cartão de Cidadão</p>
+                    <p class="en">Citizen Card Number</p>
+                </label>
+                <input id="register_cc" type="text" class="input-field" placeholder="9 Digits" name="cc" pattern="^[0-9]{9}" required>
+                
+                <div class="cenas_termos">
+                    <input class="terms_box" type="checkbox" id="terms_conditions" name="t_c" required>
+                    <label for="t_c" style="font-size: 15px;" class="checkboxTermos" onclick="window.open('/termos.html', '_blank');">
+                        Read and Accept Terms
+                    </label>
+                </div>
+
+                <div class="robot" id="html_element"></div>
+                <button type="submit" class="login_user">
+                    <p class="pt">Registar</p>
+                    <p class="en">Register</p>
+                </button>
+                <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+ 
+            </form>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./static/js/register.js"></script>
+</body>
+</html>

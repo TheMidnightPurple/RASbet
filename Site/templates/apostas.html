@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="./static/favicon.ico">
+    <meta charset="utf-8">
+    <title>Apostas RASbet</title>
+    <meta name="description" content="menu_apostas">
+    <link rel="stylesheet" href="./static/css/navbar.css">
+    <link rel="stylesheet" href="./static/css/apostas.css">
+    <link rel="stylesheet" href="./static/css/boletim.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="./static/js/navbar.js"></script> 
+    <script type="text/javascript" src="./static/js/apostas.js"></script>
+    <script type="text/javascript" src="./static/js/boletim.js"></script> 
+</head>
+
+<body> 
+    <nav>
+        <div class="opcoes_nav">
+            <a href="/apostas.html">
+                <p class="pt">Apostas</p>
+                <p class="en">Bets</p>
+            </a>
+
+            <a style="cursor: pointer; "onclick="abrir_menu_depositar()">
+                <p class="pt">Depositar</p>
+                <p class="en">Cash In</p>
+            </a>
+
+            <a style="cursor: pointer; "onclick="abrir_menu_levantar()">
+                <p class="pt">Levantar</p>
+                <p class="en">Cash Out</p>
+            </a>
+           <div class="animation start-home"></div>
+        </div>
+
+        <div class="saldo_nav">
+            <button class="arrow_buttons" onclick="mudar_tipo_moeda_previous()">&lt;</button>
+            <div class="saldo_valor">
+                             
+            </div>
+            <button class="arrow_buttons" onclick="mudar_tipo_moeda_next()">&gt;</button>
+        </div>
+
+        <div class="utilizador_nav">
+            <button class="info_utilizador" onclick="abrir_info_utilizador()">
+                <img src="./static/images/user.png">
+            </button>       
+        </div>
+    </nav>
+    
+    <div class="info_utilizador_opcoes">
+        <div class="linguagens">
+            <button class="lng_pt" onclick="switchPortugal()">Português (PT)</button>
+            <button class="lng_eng" onclick="switchEnglish()">English (EN)</button>
+        </div>
+
+        <button class="normal_button" onclick="converter_moedas()">
+            <p class="pt">Converter Moedas</p>
+            <p class="en">Coin Exchange</p>
+        </button>
+
+        <button class="normal_button" onclick="consultar_historico()">
+            <p class="pt">Consultar Histórico</p>
+            <p class="en">View History</p>
+         </button>
+
+        <button class="normal_button" onclick="reportar_problema()">
+            <p class="pt">Reportar</p>
+            <p class="en">Report</p>
+        </button>
+            
+        <button class="log_out_button" onclick="return_menu_login()">
+            <p class="pt">Log Out</p>
+            <p class="en">Log Out</p>
+        </button>
+    </div> 
+
+    <div class="drop_down_menu_depositar" id="menu_depositar">
+        <form class="depositar-container" id="depositarDinehiro">
+            
+            <label for="quantidade">
+                <b class="pt">Quantidade a Depositar</b>
+                <b class="en">Amount to Deposit</b>
+            </label>
+            <div class="quantidade_e_simbolo">
+                <input id="montante_depositar" type="dinheiro" placeholder="Insert Amount" name="quantidade" required>
+
+                <div class="selecionar_moeda_depositar">
+                    <select class="tipo_moeda_depositar" id="moeda_depositar">
+                        <option value="€">€</option>
+                        <option value="$">$</option>
+                        <option value="£">£</option>
+                        <option value="ADA">ADA</option>
+                    </select>
+                </div> 
+            </div>
+
+            <label for="cartao_credito">
+                <b class="pt">Número Cartão de Crédito</b>
+                <b class="en">Credit Card Number</b>
+            </label>
+            <input id="cc_depositar" type="cc" placeholder="Insert 16 Digits" name="cartao_credito" pattern="^(\d{4} ?){4}$" required oninvalid="this.setCustomValidity('Inserir número do cartão de crédito')"
+            oninput="this.setCustomValidity('') "> 
+
+            <label for="data_validade">
+                <b class="pt">Data de Validade</b>
+                <b class="en">Validation Date</b>
+            </label>
+            <input id="dd_depositar" type="dd" placeholder="Ex.:01/22" name="data_validade" pattern="^(0?[1-9]|1[012])\/\d{2}$" required oninvalid="this.setCustomValidity('Inserir data de validade do cartão de crédito')"
+            oninput="this.setCustomValidity('')"> 
+
+            <label for="codigo_validacao">
+                <b class="pt">Código de validação</b>
+                <b class="en">Validation Code</b>
+            </label>
+            <input id="cod_depositar" type="cod" placeholder="Insert 3 Digits" name="codigo_validacao" pattern="\d{3}" required oninvalid="this.setCustomValidity('Inserir código do cartão de crédito')"
+            oninput="this.setCustomValidity('')">  
+
+            <button type="submit" class="btn">
+                <p class="pt">Depositar</p>
+                <p class="en">Confirm Deposit</p>
+            </button>
+
+            <button type="button" class="btn cancel" onclick="cancelar_depositar()">
+                <p class="pt">Cancelar</p>
+                <p class="en">Cancel</p>
+            </button>
+        </form>
+    </div>
+
+    <div class="drop_down_menu_levantar" id="menu_levantar" >
+        <form class="levantar-container" id="levantarDinehiro">
+            
+            <label for="quantidade">
+                <b class="pt">Quantidade a Levantar</b>
+                <b class="en">Cash Out Amount</b>
+            </label>
+
+            <div class="quantidade_e_simbolo">
+                <input id="montante_levantar" type="dinheiro" placeholder="Insert Amount" name="quantidade" required>
+                <div class="selecionar_moeda_levantar">
+                    <select class="tipo_moeda_levantar" id="moeda_levantar">
+                        <option value="€">€</option>
+                        <option value="$">$</option>
+                        <option value="£">£</option>
+                        <option value="ADA">ADA</option>
+                    </select>
+                </div>   
+            </div>
+            
+            <label for="identificacao_banco">
+                <b class="pt">IBAN</b>
+                <b class="en">IBAN</b>
+            </label>
+            <!--pattern="^([A-Z]{2}\d{2} ?)?\d{4} ?\d{4} ?\d{11} ?\d{2}$"-->
+            <input id="iban_levantar" type="iban" placeholder="Insert IBAN" name="identificacao_banco" required oninvalid="this.setCustomValidity('Inserir um IBAN')"
+            oninput="this.setCustomValidity('')">
+            
+            <button id="enviar_codigo" type="submit" class="btn">
+                <p class="pt">Enviar Código</p>
+                <p class="en">Send Code</p>
+             </button>
+
+            <button id="cancelar_levantar" type="button" class="btn cancel" onclick="cancelar_levantar_dinheiro()">
+                <p class="pt">Cancelar</p>
+                <p class="en">Cancel</p>
+            </button>
+        </form>
+    </div>
+
+    <div class="zona_converter_moeda" id="menu_converter">
+        <form class="box_converter_moedas" id="conv_money">
+            <p class="pt">Quantidade da Moeda a Converter</p>
+            <p class="en">Coin Exchanged Amount</p>
+            <div class="moeda_da_qual_converter">
+                <input id="moeda_converter_de" placeholder="Insert Amount to Convert" name="quantidade" required oninput="this.setCustomValidity('')"/>
+                <div class="selecionar_moeda_converter_de">
+                    <select class="tipo_moeda_converter_de" id="mcd">
+                        <option value="€">€</option>
+                        <option value="$">$</option>
+                        <option value="£">£</option>
+                        <option value="ADA">ADA</option>
+                    </select>
+                </div> 
+            </div>
+            
+            <p class="pt">Moeda para a qual Converter</p>
+            <p class="en">Coin to which Exchange</p>
+            <div class="moeda_para_qual_converter">
+                <div class="selecionar_moeda_converter_para">
+                    <select class="tipo_moeda_converter_para" id="mcp">
+                        <option value="€">€</option>
+                        <option value="$">$</option>
+                        <option value="£">£</option>
+                        <option value="ADA">ADA</option>
+                    </select>
+                </div> 
+            </div>
+
+            <button type="submit" class="confirm_converter">
+                <p class="pt">Converter</p>
+                <p class="en">Convert</p>
+            </button>
+
+            <button class="cancelar_converter" type="button" class="btn cancel" onclick="cancelar_converter()">
+                <p class="pt">Cancelar</p>
+                <p class="en">Cancel</p>
+            </button>
+        </form>
+    </div>
+
+    <div class="zona_consultar_historico" id="menu_consultar_historico">
+        <div class="box_consultar_historico">
+            <div class="fecha_historico">
+                <img class="exitHistorico" src="./static/images/x.png" width="20px" height="20px" onclick="fecharHistorico()">
+            </div>
+
+            <div class="tipos_historico">
+                <div class="historico_ativo">
+                    <p class="pt">Apostas Ativas</p>
+                    <p class="en">Active Bets</p>
+                    <div class="caixas_apostas_ativas">
+
+                    </div>
+                </div>
+
+                <div class="historico_encerrado">
+                    <p class="pt">Apostas Encerradas</p>
+                    <p class="en">Closed Bets</p>
+                    <div class="caixas_apostas_encerradas">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zona_reportar_problema" id="menu_reportar_problema">
+        <form class="box_reportar_problema" id="rep_prob">
+            <div class="reportar_problema">
+
+                <p class="pt">Reportar Informação</p>
+                <p class="en">Report</p>
+                <div class="caixa_texto_problema">
+                 <textarea id="caixa_problema" placeholder="Describe what to Report" required></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="confirm_reportar">
+                <p class="pt">Reportar</p>
+                <p class="en">Report</p>
+            </button>
+            
+            <button class="cancelar_reportar" type="button" class="btn cancel" onclick="cancelar_reportar()">
+                <p class="pt">Cancelar</p>
+                <p class="en">Cancel</p>
+            </button>
+        </form>
+    </div>
+
+    <div class="tipo_desporto_buttons">
+        <div id="btn"></div>
+        <button id="botao_futebol" type="button" class="toggle-btn" onclick="select_foot()">
+            <img src="./static/images/ball.png" width="30px" height="20px">
+            <p class="pt">Futebol</p>
+            <p class="en">Football</p>
+        </button>
+        
+        <button id="botao_f1" type="button" class="toggle-btn" onclick="select_f1()">
+            <img src="./static/images/f1.png" width="20px" height="20px">
+            <p class="pt">Formula 1</p>
+            <p class="en">Formula 1</p>
+        </button>
+    </div>
+
+    
+    <div class="secçao_apostas_e_boletim">
+        <div class="secçao_apostas">
+            <div class="loading" >
+                <img class="" src="./static/images/loading1.gif">
+            </div>
+            <div class="box_aposta_futebol"></div>
+        </div>
+
+        <div class="secçao_boletim">
+            <div class="carrinho_compras">
+                <img src="./static/images/Carrinho-de-Compras.png" width="20px" height="20px">
+                <h3 class="pt">Boletim Apostas</h3>
+                <h3 class="en">Betting Slip</h3>
+            </div>
+
+            <div class="registos_boletim">
+                <div class="boletim_jogos">
+                </div>
+
+                <div class="boletim_pagamento">
+                    <div class="boletim_montantes">
+                        <h3 class="pt">Montante a pagar:</h3>
+                        <h3 class="en">Betting Amount:</h3>
+                    </div>
+                    <div class="boletim_ganhos">
+                        <h2 class="pt">Ganhos Possíveis:</h2>
+                        <h2 class="en">Possible Gains:</h2>
+                    </div>
+                </div>
+
+                <button class="confirmar_aposta" onclick="confirmar_boletim_2()">
+                    <p class="pt">Confirmar</p>
+                    <p class="en">Confirm</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="Classificacao">
+        <img class="exitClassificacao" src="./static/images/x.png" width="30px" height="30px" onclick="fecharVerClassi()">
+        <div class="tabelaClassificacao">
+            <div class="identificacao_campeonato">
+                <h6 class="pt">Liga BWIN 2021/2022</h6>
+                <h6 class="en">BWIN League 2021/2022</h6>
+            </div>
+
+            <div class="info_campeonato">
+                <div class="info_campeonato_inicial">
+                    <h6 class="pt">Posição</h6>
+                    <h6 class="pt">Equipa</h6>
+
+                    <h6 class="en">Position</h6>
+                    <h6 class="en">Team</h6>
+                </div>
+
+                <div class="info_campeonato_final">
+                    <h6 class="pt">Vitórias</h6>
+                    <h6 class="pt">Derrotas</h6>
+                    <h6 class="pt">Diferença de Golos</h6>
+                    <h6 class="pt">Pontos</h6>
+
+                    <h6 class="en">Wins</h6>
+                    <h6 class="en">Losses</h6>
+                    <h6 class="en">Goal Difference</h6>
+                    <h6 class="en">Points</h6>
+                </div> 
+            </div>
+
+            <div class="tabela_equipas">                    
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="ClassificacaoF1">
+        <img class="exitClassificacaoF1" src="./static/images/x.png" width="30px" height="30px" onclick="fecharVerClassiF1()">
+        <div class="tabelaClassificacaoF1">
+            <div class="identificacao_campeonatoF1">
+                <h6>Formula One World Championship 2021/2022</h6>
+            </div>
+
+            <div class="info_campeonatoF1">
+                <div class="info_campeonato_inicialF1">
+                    <h6 class="pt">Posição</h6>
+                    <h6 class="pt">Logo</h6>
+                    <h6 class="pt">Nome</h6>
+
+                    <h6 class="en">Position</h6>
+                    <h6 class="en">Logo</h6>
+                    <h6 class="en">Name</h6>
+                </div>
+
+                <div class="info_campeonato_finalF1">
+                    <h6 class="pt">Pontos</h6>
+
+                    <h6 class="en">Points</h6>
+                </div> 
+            </div>
+
+            <div class="tabela_equipasF1">                    
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="./static/js/main.js"></script> 
+</body>
+</html>

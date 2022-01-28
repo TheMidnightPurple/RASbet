@@ -1,0 +1,1126 @@
+
+nav{
+    position: relative;
+    width: 100vw;
+    height: 50px;
+    order: 1;
+    background: linear-gradient(to right, #00204a, #ffffff);
+    display: flex;
+    font-size: 0;
+    /*border: solid black;*/
+    justify-content: space-between;
+}
+
+a:nth-child(1){
+    width: 100px;
+}
+
+nav .start-apostas, a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0;
+}
+
+a:nth-child(2){
+    width: 100px;
+}
+
+nav .start-depositar, a:nth-child(2):hover~.animation{
+    width: 100px;
+    left: 100px;
+}
+
+a:nth-child(3){
+    width: 100px;
+}
+
+nav .start-levantar, a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 200px;
+}
+
+a:nth-child(4){
+    width: 120px;
+}
+
+nav .start-historico, a:nth-child(4):hover~.animation{
+    width: 120px;
+    left: 300px;
+}
+
+a:nth-child(5){
+    width: 150px;
+}
+
+nav .start-problemas, a:nth-child(5):hover~.animation{
+    width: 150px;
+    left: 420px;
+}
+
+nav .animation{
+    position: absolute;
+    height: 8px;
+    bottom: 0;
+    z-index: 0;
+    background: #15daaf;
+    width: 100px;
+    transition: all .2s ease 0s;
+    border-radius: 5px;
+    border: 1px solid #00204a;
+}
+
+nav a:hover{
+    color: #15daaf;
+}
+
+
+.opcoes_nav{
+    width: 85vw;
+}
+
+.opcoes_nav a{
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*icone de utlizador*/
+.utilizador_nav{
+    width: 5vw;
+}
+
+.info_utilizador{
+    width: 100%;
+    height: 100%;
+    margin-top: 3px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.info_utilizador img{
+    width: 60%;
+    height: 90%;
+}
+
+
+.info_utilizador_opcoes{
+    display: none;
+    position: absolute;
+    border: 3px solid #00204a;
+    border-radius: 10px;
+    width: 15%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    width: 15vw;
+    margin-left: 84vw;
+    background: white;
+}
+
+.normal_button{
+    width: 96%;
+    height: 60px;
+    margin-top: 3px;
+    margin-left: 4px;    
+    margin-bottom: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    border: transparent;
+    background: #00204a;
+    opacity: 0.8;
+    color: white;
+    cursor: pointer;
+}
+
+.log_out_button{
+    width: 96%;
+    height: 60px;
+    margin-top: 3px;
+    margin-left: 4px;    
+    margin-bottom: 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    border: transparent;
+    background: red;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.normal_button:hover {
+    opacity: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*font-weight: bold;*/
+    font-size: 14px;
+}
+
+.log_out_button:hover {
+    opacity: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*font-weight: bold;*/
+    font-size: 14px;
+}
+
+.saldo_nav{
+    width: 15vw;
+    display: flex;
+    margin-right: 25px;
+}
+
+.saldo_valor{
+    display: flex;
+    width: 20vw;
+}
+
+.saldo_valor h6{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+    margin-right: 10px;
+    color: #00204a;
+}
+
+.saldo_valor h5{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+    margin-left: 0;
+    color: rgb(0, 131, 28)
+}
+
+.arrow_buttons{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.arrow_buttons:hover{
+    color: green;
+}
+
+
+/*escolher desporto button*/
+
+.tipo_desporto_buttons{
+    width: 100vw;
+    position: relative;
+    display: flex;
+    background: linear-gradient(to right, #00204a, #ffffff);
+}
+
+.toggle-btn{
+    margin: auto;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 5px;
+    color: white;
+}
+
+
+#btn{
+    height: 100%;
+    position: absolute;
+    width: 50vw;
+    background: #15daaf;
+    transition: .5s;
+    border-radius: 5px;
+    border: 2px solid #00204a;
+}
+
+/*Depositar*/
+
+/*maneira como popup aparece*/
+.drop_down_menu_depositar{
+    display: none;/*para não aparecer logo no início(só quando se carregar em depositar)*/
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+    position: absolute;   
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all .9s ease .9s;
+}
+
+
+/*container que aparece quando carregamos em depositar*/
+.depositar-container{
+    width: 75vw;
+    height: 75vh;
+    padding: 30px;
+    margin-left: 12vw;
+    margin-top: 8vh;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px 5px #00204a;
+    border-radius: 10px;
+    z-index: 10;
+    position: absolute;
+    animation: fadeIn .2s linear; /* Safari, Chrome and Opera > 12.1 */
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+      top: 0;
+    }
+    75% {
+      opacity: 0.5;
+      margin-top: 8vh;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    75% {
+        opacity: 0.5;
+        margin-top: 8vh;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/*cor e tamanho de quantidade e numero cartao credito */
+.depositar-container b{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.quantidade_e_simbolo {
+    display: flex;
+}
+
+.quantidade_e_simbolo input{
+    width: 60%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+.selecionar_moeda_depositar{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+
+.tipo_moeda_depositar{
+    width: 60px;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    background: #f0f0f0;
+}
+
+/*campos dentro do container*/
+.depositar-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+/*estilo dos botões de depositar */
+.depositar-container .btn {
+    background-color: #00204a;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+  }
+  
+  /*botão de cancelar a vermelho*/
+  .depositar-container .cancel {
+    background-color: red;
+  }
+  
+  /*efeitos de hovering */
+  .depositar-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+/*Levantar*/
+
+/*maneira como popup aparece*/
+.drop_down_menu_levantar{
+    display: none;/*para não aparecer logo no início(só quando se carregar em depositar)*/
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+    position: absolute;   
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .5s;
+}
+
+
+/*container que aparece quando carregamos em levantar*/
+.code_section{
+    margin-top: 10px;
+}
+
+.codigoSeparado{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.codigoSeparado p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*campos dentro do container*/
+.codigoSeparado input {
+    height: 40px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+
+
+.levantar-container{
+    width: 75vw;
+    height: 60vh;
+    padding: 30px;
+    margin-left: 12vw;
+    margin-top: 8vh;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px 5px #00204a;
+    border-radius: 10px;
+    z-index: 10;
+    position: absolute;
+    animation: fadeIn .2s linear;
+}
+
+
+/*cor e tamanho de quantidade e iban */
+.levantar-container b{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+/*campos dentro do container*/
+.levantar-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+
+  
+/*botão de cancelar a vermelho*/
+.levantar-container .btn {
+    background-color: #00204a;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+/*efeitos de hovering */
+/*botão de cancelar a vermelho*/
+.levantar-container .cancel {
+    background-color: red;
+}
+  
+/*efeitos de hovering */
+.levantar-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+.selecionar_moeda_levantar{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.tipo_moeda_levantar{
+    width: 60px;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    background: #f0f0f0;
+}
+
+/*mensagem de alerta*/
+.alert_levantar {
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #f44336;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.alert_depositar {
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #f44336;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.alert_converter {
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #f44336;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    position: absolute;
+    margin-left: 570px;
+    margin-top: 38px;
+    font-size: 14px;
+}
+
+.alert_problema {
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #f44336;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    position: absolute;
+    margin-left: 680px;
+    margin-top: 38px;
+    font-size: 14px;
+}
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+        color: black;
+  }
+
+/*caixa para converter moedas*/
+.zona_converter_moeda{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+    position: absolute;   
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .5s;
+}
+
+.box_converter_moedas{
+    width: 75vw;
+    height: 50vh;
+    padding: 30px;
+    margin-left: 12vw;
+    margin-top: 20vh;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px 5px #00204a;
+    border-radius: 10px;
+    z-index: 10;
+    position: absolute;
+    animation: fadeInMoedas .2s linear;
+}
+
+@-webkit-keyframes fadeInMoedas {
+    0% {
+      opacity: 0;
+      top: 0;
+    }
+    75% {
+      opacity: 0.5;
+      margin-top: 20vh;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInMoedas {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    75% {
+        opacity: 0.5;
+        margin-top: 20vh;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.box_converter_moedas p{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    font-weight: bold;
+}
+
+.moedas_converter p{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    font-weight: bold;
+}
+
+.moeda_da_qual_converter{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.moeda_para_qual_converter{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.moeda_da_qual_converter input{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 10px 0px 0;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+.tipo_moeda_converter_de{
+    margin-left: 10px;
+    padding: 15px;
+    margin: 5px 0 0px 0;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+.moeda_para_qual_converter input{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 10px 0px 0;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+.tipo_moeda_converter_para{
+    margin-left: 10px;
+    padding: 15px;
+    margin: 5px 0 0px 0;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+.confirm_converter{
+    background-color: #00204a;
+    opacity: 0.8;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.confirm_converter p{
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.confirm_converter:hover{
+    opacity: 1;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cancelar_converter{
+    background: red;
+    opacity: 0.8;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cancelar_converter p{
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.cancelar_converter:hover{
+    opacity: 1;
+    font-size: 14px;
+}   
+
+/*caixa consultar histórico*/
+.fecha_historico{
+    margin-left: 97%;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.zona_consultar_historico{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+    position: absolute;   
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .5s;
+}
+
+.box_consultar_historico{
+    width: 75vw;
+    height: 75vh;
+    margin-left: 12vw;
+    margin-top: 5vh;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px 5px #00204a;
+    border-radius: 10px;
+    z-index: 10;
+    position: absolute;
+    animation: fadeInHistorico .2s linear;
+}
+
+@-webkit-keyframes fadeInHistorico {
+    0% {
+      opacity: 0;
+      top: 0;
+    }
+    75% {
+      opacity: 0.5;
+      margin-top: 5vh;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInHistorico {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    75% {
+        opacity: 0.5;
+        margin-top: 5vh;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.tipos_historico{
+    display: flex;
+    /*background: yellow;*/
+    height: 95%;
+    justify-content: space-evenly;
+}
+
+.historico_ativo{
+    /*background: red;*/
+    width: 48%;
+    margin-left: 10px;
+}
+
+.historico_ativo p{
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    font-weight: bold;
+    border-bottom: 4px solid rgb(0, 134, 22);
+    color: rgb(0, 134, 22);
+}
+
+.caixas_apostas_ativas{
+    height: 300px;
+    height: 85%;
+    overflow-y: scroll;
+    /*background: #15daaf;*/
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px 4px rgb(196, 196, 196);
+    background: white
+}
+
+.aposta_ativa_box{
+    display: flex;
+    margin: 20px;
+    border: 4px solid rgb(196, 196, 196);
+    box-shadow: 1px 1px 0px rgb(196, 196, 196),
+                2px 2px 0px rgb(196, 196, 196),
+                3px 3px 0px rgb(196, 196, 196),
+                4px 4px 0px rgb(196, 196, 196),
+                5px 5px 0px rgb(196, 196, 196),
+                6px 6px 0px rgb(196, 196, 196);
+    border-radius: 10px;
+    background: white;
+    margin-top: 20px;
+}
+
+.aposta_ativa_logos_solo{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+
+.aposta_ativa_logos_empate{
+    height: 50px;
+    margin: 20px;
+    display: flex;
+}
+
+.aposta_ativa_nomes{
+    margin: 10px;
+}
+
+.nomes_em_linha{
+    display: flex;
+}
+
+.nomes_em_linha p{
+    margin-top: 3px;
+}
+
+.aposta_ativa_nomes h5{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.aposta_ativa_nomes h6{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    color: red;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.aposta_ativa_nomes h4{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    color: green;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.aposta_ativa_nomes p{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    color: black;
+    border: none;
+    font-weight: lighter;
+}
+
+.historico_encerrado{
+    /*background: blue;*/
+    width: 48%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.historico_encerrado p{
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    font-weight: bold;
+    border-bottom: 4px solid rgb(134, 0, 0);
+    color: rgb(134, 0, 0);
+}
+
+.caixas_apostas_encerradas{
+    height: 300px;
+    height: 85%;
+    overflow-y: scroll;
+    box-shadow: 0 0 10px 4px rgb(196, 196, 196);
+    background: white;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.aposta_encerrada_box_loss{
+    display: flex;
+    margin: 20px;
+    border: 4px solid rgb(134, 0, 0);
+    box-shadow: 1px 1px 0px rgb(134, 0, 0),
+                2px 2px 0px rgb(134, 0, 0),
+                3px 3px 0px rgb(134, 0, 0),
+                4px 4px 0px rgb(134, 0, 0),
+                5px 5px 0px rgb(134, 0, 0),
+                6px 6px 0px rgb(134, 0, 0);
+    border-radius: 10px;
+    margin-top: 20px;
+    background: white;
+}
+
+.aposta_encerrada_box_win{
+    display: flex;
+    margin: 20px;
+    border: 4px solid rgb(0, 134, 22);
+    box-shadow: 1px 1px 0px rgb(0, 134, 22),
+                2px 2px 0px rgb(0, 134, 22),
+                3px 3px 0px rgb(0, 134, 22),
+                4px 4px 0px rgb(0, 134, 22),
+                5px 5px 0px rgb(0, 134, 22),
+                6px 6px 0px rgb(0, 134, 22);
+    border-radius: 10px;
+    margin-top: 20px;
+    background: white;
+}
+
+.aposta_encerrada_logos_solo{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+}
+
+.aposta_encerrada_logos_empate{
+    height: 50px;
+    margin: 20px;
+    display: flex;
+}
+
+.aposta_encerrada_nomes{
+    margin: 10px;
+}
+
+.aposta_encerrada_nomes h5{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    color: black;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.aposta_encerrada_nomes h6{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    color: red;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.aposta_encerrada_nomes h4{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    color: green;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.aposta_encerrada_nomes p{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    color: black;
+    border: none;
+    font-weight: lighter;
+}
+
+
+/*caixa de reportar problemas*/
+.zona_reportar_problema{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+    position: absolute;   
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: .5s;
+}
+
+.box_reportar_problema{
+    width: 75vw;
+    height: 50vh;
+    padding: 30px;
+    margin-left: 12vw;
+    margin-top: 20vh;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px 5px #00204a;
+    border-radius: 10px;
+    z-index: 10;
+    position: absolute;
+    animation: fadeInMoedas .2s linear;
+}
+
+.reportar_problema p{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    font-weight: bold;
+}
+
+.caixa_texto_problema textarea{
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    margin: 5px 10px 0px 0;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+
+.confirm_reportar{
+    background-color: #00204a;
+    opacity: 0.8;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    margin-top: 10px;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.confirm_reportar:hover{
+    opacity: 1;
+    font-size: 14px;
+}
+
+.cancelar_reportar{
+    background: red;
+    opacity: 0.8;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cancelar_reportar:hover{
+    opacity: 1;
+    font-size: 14px;
+}   
+
+
+.linguagens{
+    position: relative;
+    display: flex;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 4px;    
+    margin-bottom: 4px;
+}
+
+.lng_eng{
+    margin-left: 10px;
+}
+
+.lng_pt{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    border: 4px solid #00204a;
+    box-shadow: 1px 1px 0px #00204a,
+                2px 2px 0px #00204a,
+                3px 3px 0px #00204a,
+                4px 4px 0px #00204a,
+                5px 5px 0px #00204a,
+                6px 6px 0px #00204a;
+    background: white;
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.lng_eng{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    border: 4px solid rgb(196, 196, 196);
+    box-shadow: 1px 1px 0px rgb(196, 196, 196),
+                2px 2px 0px rgb(196, 196, 196),
+                3px 3px 0px rgb(196, 196, 196),
+                4px 4px 0px rgb(196, 196, 196),
+                5px 5px 0px rgb(196, 196, 196),
+                6px 6px 0px rgb(196, 196, 196);
+    border-radius: 10px;
+    background: white;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.en{
+    display: none;
+}
